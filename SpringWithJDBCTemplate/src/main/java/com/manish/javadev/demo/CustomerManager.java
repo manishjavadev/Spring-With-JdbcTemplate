@@ -50,17 +50,16 @@ public class CustomerManager {
 		System.out.println("======================");
 
 		// Update Operation
-		cust = customerService.getCustomerById(4);
+		CustomerTO custo = new CustomerTO(1, "Manish SE Updated", "Srivastava Updated", 27,
+				"LKO");
+		customerService.updateCustomer(custo);
 		System.out.println(cust);
 		System.out.println("Update Customer By Id Operation Done");
 		System.out.println("======================");
 
 		// Delete Operation
-		customerService.deleteCustomer(1);
+		customerService.deleteCustomer(2);
 		System.out.println("Delete Customer By Id Operation Done");
 		System.out.println("======================");
-		
-		System.out.println("TesCode");
-
 	}
 }
